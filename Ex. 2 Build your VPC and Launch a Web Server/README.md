@@ -2,9 +2,9 @@
 
 ## Author
 
-* **Name**: ________________________________
-* **Register Number**: _____________________
-* **Date of Submission**: __________________
+* **Name**: Soma Nathan L
+* **Register Number**: 212223060267
+* **Date of Submission**: 
 
 ---
 
@@ -87,11 +87,11 @@ Create a simple HTML page and verify that it can be accessed from a web browser 
 
 (Write the steps you followed in your own words)
 
-1. ---
-2. ---
-3. ---
-4. ---
-5. ---
+1. Created a VPC named lab-vpc in the us-east-1 region with a 10.0.0.0/16 CIDR block, along with public and private subnets, an Internet Gateway, NAT Gateway, and route tables.
+2. Created additional public and private subnets in a second Availability Zone and configured the route table associations so that public subnets used the Internet Gateway and private subnets used the NAT Gateway.
+3. Created a security group named Web Security Group and configured an inbound HTTP rule to allow web requests from anywhere over IPv4.
+4. Launched an EC2 instance named Web Server 1 using Amazon Linux 2023 and t2.micro, placed it in the lab-subnet-public2 subnet, enabled a public IP, and attached the Web Security Group.
+5. Added the user-data script to install and start the Apache web server, accessed the instance through its Public IPv4 DNS, verified the website and instance metadata, and submitted the lab successfully with a score of 30/30.
 
 ---
 
@@ -99,19 +99,22 @@ Create a simple HTML page and verify that it can be accessed from a web browser 
 
 ### Screenshot 1: VPC and Subnet Details
 
-(Insert Screenshot Here)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/c09f5733-2286-4fdb-a6ca-dc682e07da6f" />
+
 
 ---
 
 ### Screenshot 2: EC2 Instance Running
 
-(Insert Screenshot Here)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/3e55f808-24d0-4a0e-b55a-5431015ccdb2" />
+
 
 ---
 
 ### Screenshot 3: Web Server Output in Browser
 
-(Insert Screenshot Here)
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/4bb13184-41df-4109-927e-39d60d7495c7" />
+
 
 ---
 
