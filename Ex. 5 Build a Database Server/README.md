@@ -2,7 +2,7 @@
 
 ## Author
 
-* **Name**: Soma Nathan l
+* **Name**: Soma Nathan L
 * **Register Number**: 212223060267
 * **Date of Submission**: 05.09.2026
 
