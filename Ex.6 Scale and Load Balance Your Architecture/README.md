@@ -3,7 +3,10 @@
 ## Title
 
 Scale and Load Balance Your Architecture
-Author : your name   Reg no : yours   Date :
+
+---
+
+Author : Soma Nathan L   Reg no : 212223060267  Date : 30.08.2026
 
 ---
 
@@ -66,14 +69,40 @@ Students test the setup by generating traffic and observing automatic scaling an
 
 ## Workflow (To be filled by Student)
 
-Describe step-by-step how you performed this experiment in your own words.
+1. I reviewed the existing EC2-based application architecture that I had created in previous experiments to understand how the instances were configured and how the application was being accessed.
+
+2. I created a Launch Template by defining the EC2 configuration, including the Amazon Machine Image (AMI), instance type, key pair, security group, and user data script for automatic application setup during instance launch.
+
+3. Using the launch template, I created an Auto Scaling Group. I configured the minimum, maximum, and desired capacity values to control how many EC2 instances should run based on demand. I also selected the appropriate VPC and subnets.
+
+4. Next, I created an Application Load Balancer and configured a target group. I set the protocol and port (HTTP/HTTPS) and defined health check settings to monitor the EC2 instances.
+
+5. I attached the Auto Scaling Group to the target group so that any instances launched by the Auto Scaling Group would automatically register with the Load Balancer.
+
+6. I configured scaling policies based on CPU utilization. I created Amazon CloudWatch alarms to automatically increase the number of instances when CPU usage was high and decrease them when CPU usage was low.
+
+7. Finally, I tested the setup by generating traffic to the Load Balancer DNS name. I observed that the traffic was distributed evenly across instances and that additional instances were launched automatically when the CPU utilization threshold was exceeded.
 
 ---
 
 ## Output Screenshots 
 
+## Created LoadBalancer
 
----
+<img width="1721" height="785" alt="image" src="https://github.com/user-attachments/assets/dcfb901c-76af-42b6-839b-0b1c8b486f1f" />
+
+## Created LabConfig
+
+
+<img width="1920" height="1080" alt="Screenshot 2026-08-29 220524" src="https://github.com/user-attachments/assets/fee98ff7-4cd5-4a57-b455-0b809280421f" />
+
+
+## Dynamic Scaling Policy created
+
+<img width="1722" height="822" alt="Screenshot 2026-09-02 104221" src="https://github.com/user-attachments/assets/2c10c026-f5b2-41b1-aca2-22840ff3956b" />
+
+
+
 
 
 ## Result
